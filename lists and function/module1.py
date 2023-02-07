@@ -34,7 +34,7 @@ def write_workers_to_file(b:list,l:list):
         l.append(name)
         birthday=int(input('birthday:'))
         b.append(birthday)
-    return b,n
+    return b,l
 
 
 def youngest_workers(zipped:list):
