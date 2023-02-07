@@ -58,7 +58,7 @@ def average_age(b:list,l:list):
         v=b.index(avg_age)  
         print(f'{avg_age} {l[v]}') 
     else: 
-        print(f'average age is {avg_age}')  
+        print(f'average year of birth is {avg_age}')  
     return avg_age
 
 def year_worker(b:list,l:list):
