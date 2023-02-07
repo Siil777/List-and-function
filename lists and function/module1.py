@@ -32,7 +32,7 @@ def write_workers_to_file(b:list,l:list):
     for j in range(n):
         name=input('name:')
         l.append(name)
-        birthday=int(input('birthday:'))
+        birthday=input('birthday:')
         b.append(birthday)
     return b,l
 
