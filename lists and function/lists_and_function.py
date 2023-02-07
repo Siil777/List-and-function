@@ -9,7 +9,7 @@ from module1 import*
 
 while True:
     print(f'-----------------------------------------------------------------------------------------------')
-    print(f'\n0 read from file\n1 input workers and birthday,\n2 save to file.\n3 youngest workers,\n4 average year of birth,\n5 year worker\n6 show pensioners,\n7 show younger or older den certain year\n8 exit')
+    print(f'\n0 read from file\n1 input workers and birthday,\n2 save to file.\n3 youngest workers,\n4 average year of birth,\n5 year worker\n6 show pensioners,\n7 show younger or older then certain year\n8 exit')
     v=input('>>:')
     if v=='0':
         birthday=[]
