@@ -23,7 +23,9 @@ while True:
         print(birthday)
 
     elif v=='1':
-        write_workers_to_file(birthday,workers)
+        birthday,workers=write_workers_to_file(birthday,workers)
+        print(birthday)
+        print(workers)
 
     elif v=='2':
         save_to_file(birthday,'birthday_file.txt' )
