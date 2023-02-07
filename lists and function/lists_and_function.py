@@ -12,13 +12,13 @@ while True:
     print(f'\n0 read from file\n1 input workers and birthday,\n2 save to file.\n3 youngest workers,\n4 average age,\n5 year worker\n6 show pensioners,\n7 show younger or older den certain year\n8 exit')
     v=input('>>:')
     if v=='0':
-    	birthday=[]
-    	workers=[]# empty lists
-    	birthday=read_file('birthday_file.txt')
-    	workers=read_file('workers_file.txt')
-    	zipped=list(zip(birthday,workers))
-    	print(workers)
-    	print(birthday)
+        birthday=[]
+        workers=[]# empty lists
+        birthday=read_file('birthday_file.txt')
+        workers=read_file('workers_file.txt')
+        zipped=list(zip(birthday,workers))
+        print(workers)
+        print(birthday)
   
 
     elif v=='1':
