@@ -10,17 +10,16 @@ from module1 import*
 while True:
     print(f'-----------------------------------------------------------------------------------------------')
     print(f'\n0 read from file\n1 input workers and birthday,\n2 save to file.\n3 youngest workers,\n4 average age,\n5 year worker\n6 show pensioners,\n7 show younger or older den certain year\n8 exit')
-    birthday=[]
-    workers=[]# empty lists
-    birthday=read_file('birthday_file.txt')
-    workers=read_file('workers_file.txt')
-    zipped=list(zip(birthday,workers))
-
     v=input('>>:')
     if v=='0':
-        #palgad=str_to_int(palgad)
-        print(workers)
-        print(birthday)
+    	birthday=[]
+    	workers=[]# empty lists
+    	birthday=read_file('birthday_file.txt')
+    	workers=read_file('workers_file.txt')
+    	zipped=list(zip(birthday,workers))
+    	print(workers)
+    	print(birthday)
+  
 
     elif v=='1':
         birthday,workers=write_workers_to_file(birthday,workers)
