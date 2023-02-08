@@ -99,6 +99,17 @@ def lower_or_bigger(choice,amount,zipped:list):
                 for i in zipped:
                     if i[0]>amount:
                         print(f"Имя человека, младше {amount}: {i[1]}. Его год рождения: {i[0]}.")
+                        
+def delete(name:str,b:list,l:list): 
+    n=l.count(name) 
+    pos=0 
+    print(name,n) 
+    for i in range(n): 
+        ind=l.index(name,pos) 
+        pos=ind+1 
+        l.remove(name) 
+        b.pop(ind)
+    return b,l
 
 
 
