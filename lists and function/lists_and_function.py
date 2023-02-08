@@ -12,28 +12,34 @@ while True:
     print(f'\n0 read from file\n1 input workers and birthday,\n2 save to file.\n3 youngest workers,\n4 average year of birth,\n5 year worker\n6 show pensioners,\n7 show younger or older then certain year\n8 delete\n9 exit')
     v=input('>>:')
     if v=='0':
+        workers=[]
         birthday=[]
-        workers=[]# empty lists
-        birthday=read_file('birthday_file.txt')
+        # empty lists
         workers=read_file('workers_file.txt')
-        zipped=list(zip(birthday,workers))
+        birthday=read_file('birthday_file.txt')
+        
+
+        zipped=list(zip(workers,birthday))
+        
         print(workers)
         print(birthday)
+        
   
 
     elif v=='1':
-        birthday,workers=write_workers_to_file(birthday,workers)
+        workers,birthday=write_workers_to_file(workers,birthday)
         print(birthday)
         print(workers)
 
     elif v=='2':
-        save_to_file(birthday,'birthday_file.txt' )
-        save_to_file(workers,'workers_file.txt' )
+        save_to_file(workers,'workers_file.txt')
+        save_to_file(birthday,'birthday_file.txt')
+        
 
     elif v=='3': 
         youngest_workers(zipped)
     elif v=='4': 
-        average_age(birthday, workers)
+        average_age(workers, birthday)
     elif v=='5': 
         year_worker(birthday,workers)
     elif v=='6':
@@ -43,8 +49,8 @@ while True:
         amount=input("input year for comparing: ")
         lower_or_bigger(choice,amount,zipped)
     elif v=='8': 
-        workers,birthday=delete_worker(input('name:'),workers,birthday) 
-        print(workers)  
+        birthday,workers=delete_worker(input('name:'),birthday,workers)  
+        print(workers) 
         print(birthday) 
 
     elif v=='9':
