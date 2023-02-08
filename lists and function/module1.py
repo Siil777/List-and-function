@@ -39,7 +39,7 @@ def write_workers_to_file(b:list,l:list):
         b.append(birthday)
     return b,l
 
-def delete_worker(name:str,l:list,b:list): 
+def delete_worker(name:str,b:list,l:list): 
     n=l.count(name) 
     pos=0 
     print(name,n) 
@@ -48,7 +48,7 @@ def delete_worker(name:str,l:list,b:list):
         pos=ind+1 
         l.remove(name) 
         b.pop(ind)
-    return b,l
+    return l,b
 
 
 def youngest_workers(zipped:list):
@@ -75,7 +75,7 @@ def average_age(b:list,l:list):
         print(f'average year of birth is {avg_age}')  
     return avg_age
 
-def year_worker(b:list,l:list):
+def year_worker(l:list,b:list):
     """
     :param p:list
     :param i:list
@@ -110,6 +110,7 @@ def lower_or_bigger(choice,amount,zipped:list):
                 for i in zipped:
                     if i[0]>amount:
                         print(f" {amount} is - {i[1]}. in comparison with: {i[0]}.")
+
 
 
 
