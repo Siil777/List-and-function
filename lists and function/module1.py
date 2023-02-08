@@ -39,7 +39,7 @@ def write_workers_to_file(b:list,l:list):
         b.append(birthday)
     return b,l
 
-def delete(name:str,b:list,l:list): 
+def delete_worker(name:str,l:list,b:list): 
     n=l.count(name) 
     pos=0 
     print(name,n) 
@@ -56,7 +56,7 @@ def youngest_workers(zipped:list):
     :param zipped:list
     """
     top_low=sorted(zipped)[:10]
-    print(f"Ð¡Ð°Ð¼Ñ‹Ðµ Ð¼Ð¾Ð»Ð¾Ð´Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð½Ð¸ÐºÐ¸ {top_low}")
+    print(f"number of middle-aged workers: {top_low}")
 
 
 
@@ -99,20 +99,17 @@ def pensioner(zipped:list):
         birth_year = int(i[0])
         age=now_year-birth_year
         if birth_year<amount:
-            print(f"name of pensioner {i[1]}. date of birth {i[0]}. him {age} year(Ð³Ð¾Ð´Ð°).")
+            print(f"name of pensioner {i[1]}. date of birth {i[0]}. him {age} year.")
 
-
-#Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð½Ð° ÑÐ²Ð¾Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€.
-#Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÑÐµÑ‚ Ð»ÑŽÐ´ÐµÐ¹ Ð¼Ð»Ð°Ð´ÑˆÐµ Ð¸Ð»Ð¸ ÑÑ‚Ð°Ñ€ÑˆÐµ Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð³Ð¾Ð´Ð°, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð²Ð²ÐµÐ´ÐµÑ‚ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ.
 def lower_or_bigger(choice,amount,zipped:list):
     if choice=="1":
         for i in zipped:
             if i[0]<amount:
-                print(f"Ð˜Ð¼Ñ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ° ÑÑ‚Ð°Ñ€ÑˆÐµ {amount} Ð³Ð¾Ð´Ð° - {i[1]}. Ð•Ð³Ð¾ Ð³Ð¾Ð´ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ: {i[0]}.")
+                print(f" {amount} is - {i[1]}. in comparison with: {i[0]}.")
             elif choice=="2":
                 for i in zipped:
                     if i[0]>amount:
-                        print(f"Ð˜Ð¼Ñ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ°, Ð¼Ð»Ð°Ð´ÑˆÐµ {amount}: {i[1]}. Ð•Ð³Ð¾ Ð³Ð¾Ð´ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ: {i[0]}.")
+                        print(f" {amount} is - {i[1]}. in comparison with: {i[0]}.")
 
 
 
