@@ -39,13 +39,13 @@ while True:
     elif v=='6':
         pensioner(zipped)
     elif v=='7':
-        choice=input("would you like to know who older to whom? (1 Ð¸Ð»Ð¸ 2)")
+        choice=input("would you like to know who older to whom? (1 younger 2 older)")
         amount=input("input year for comparing: ")
         lower_or_bigger(choice,amount,zipped)
     elif v=='8': 
-        workers,birthday=delete(input('name:'),workers,birthday) 
+        workers,birthday=delete_worker(input('name:'),workers,birthday) 
         print(workers)  
-        print(birthday)
+        print(birthday) 
 
     elif v=='9':
         break
